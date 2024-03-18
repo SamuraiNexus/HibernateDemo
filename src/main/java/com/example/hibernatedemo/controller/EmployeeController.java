@@ -65,7 +65,7 @@ public class EmployeeController {
     @GetMapping("/departments")
     public ResponseEntity<List<Employee>> getEmployeesByDepartmentId(@RequestParam int department_id) {
         List<Employee> employees = employeeService.findEmployeeWithDepartmentId(department_id);
-        return new ResponseEntity<>(employees, HttpStatus.FOUND);
+        return new ResponseEntity<>(employees, HttpStatus.OK);
     }
 
 }
